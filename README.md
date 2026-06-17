@@ -1,36 +1,83 @@
-Omnideck: Ben 10 3D Interface
-Welcome to Omnideck, a high-performance, immersive web application designed to catalog the vast universe of Ben 10. Built with a focus on 3D interactivity, terminal-inspired aesthetics, and seamless user experience, Omnideck serves as the ultimate digital database for every transformation in the series.
+# OMNIDECK
 
-🚀 Key Features
-3D Interactive Interface: Experience a highly responsive 3D parallax engine that brings alien transformations to life with real-time mouse-tracking physics.
+An immersive, high-fidelity 3D interface designed to catalog the vast universe of Ben 10.
+Omnideck blends clean glass-morphism data terminals with active, floating 3D canvas elements
+to deliver a sleek, terminal-inspired database experience.
 
-Immersive Hero Section: A "Hero Time" landing experience featuring dynamic background elements and a polished, glass-morphism terminal interface.
+---
 
-Alien Index: A streamlined, background-free cataloging system that utilizes smooth GSAP animations to create a "breathing" and floating effect for each character.
+## 🔥 Key Visual Features
 
-Omnitrix Data Hub: A dedicated section to explore the evolution of the Omnitrix, featuring a clean, responsive layout and high-fidelity 3D assets.
+- **Background-Free 3D Models:** Alien lifeforms and Omnitrix assets float directly on the
+  page grid over dynamic cosmic bubbles — completely stripped of clunky bounding boxes and
+  rigid card designs.
 
-Tech-Driven Aesthetic: Built with a "dark mode" design language, neon green accents, and typography optimized for a sci-fi data terminal feel.
+- **Autonomous Floating/Breathing Engine:** Utilizing optimized performance loops, visual
+  assets exhibit continuous, organic micro-movements independently without relying on mouse
+  presence.
 
-🛠 Tech Stack
-Frontend: React.js
+- **Dual-Spectrum Glow Typography:**
+  - Main Section Heads feature a striking Yellow Neon Shadow Aura (`#eab308`).
+  - Identity text nodes and primary command buttons maintain crisp, high-contrast white
+    configurations.
 
-Animation: GSAP (GreenSock Animation Platform) for physics-based movement and infinite floating loops.
+- **Sci-Fi Terminal Glass Boxes:** Data descriptions use a subtle semi-transparent backdrop
+  blend (`bg-black/40 backdrop-blur-md`) with thin, high-transparency green energy borders
+  (`border-emerald-500/20`).
 
-Styling: Tailwind CSS for responsive grid layouts and glass-morphism effects.
+---
 
-3D Visuals: Custom ThreeMeshVisualizer component for rendering and controlling 3D assets.
+## 🛠️ Architecture & Core Components
 
-📂 Project Structure
-src/components/: Contains modular UI components including Aliens.jsx, Omnitrix.jsx, and ThreeMeshVisualizer.jsx.
+**`ThreeMeshVisualizer.jsx`**
+The foundational WebGL layer responsible for mounting image textures onto active, responsive
+3D meshes that handle displacement and real-time canvas positioning.
 
-src/data/: Centralized data management for alien species and device generations.
+**`Aliens.jsx` / `AlienCard.jsx`**
+Maps raw project datasets into isolated, vertically streaming components. Designed cleanly
+to avoid state collisions or Hook sequence rendering errors.
 
-assets/: Repository for high-resolution character renders and device imagery.
+**`Omnitrix.jsx`**
+A generation-selector device control panel that dynamically links generation data indices
+(`Original Series`, `Alien Force`, `Ultimate Alien`) with responsive profile cards instantly.
 
-⚙️ Development Notes
-State Management: Optimized with React Hooks to ensure zero-lag interactions when switching between alien profiles.
+---
 
-Animation Physics: Each 3D card utilizes perspective-based transforms (perspective(1000px)) to provide authentic depth when users interact with the interface.
+## 🚀 Installation & Setup
 
-This project is an ongoing exploration of bringing 3D web experiences to life. Feel free to explore the code, report issues, or suggest new features for the Omnitrix database!
+1. Clone the Omnitrix terminal database:
+```bash
+   git clone https://github.com/your-username/omnideck.git
+   cd omnideck
+```
+
+2. Install dependency nodes:
+```bash
+   npm install
+```
+
+3. Deploy local development server:
+```bash
+   npm run dev
+```
+
+---
+
+## ⚙️ Core Animation Logic
+
+The standalone floating effect is driven by continuous mathematical sine mapping via GSAP:
+
+```js
+gsap.to(containerRef.current, {
+  y: -15,           // Real-time elevation lift
+  rotationZ: 1,     // Subtle orbital roll
+  duration: 2.5,    // Complete cycle duration
+  repeat: -1,       // Infinite loop sequence
+  yoyo: true,       // Seamless back-and-forth execution
+  ease: "sine.inOut" // Organic inertia dampening
+});
+```
+
+---
+
+> Developed as an exploration of high-performance 3D visual data tracking. **It's Hero Time.**
