@@ -1,16 +1,36 @@
-# React + Vite
+Omnideck: Ben 10 3D Interface
+Welcome to Omnideck, a high-performance, immersive web application designed to catalog the vast universe of Ben 10. Built with a focus on 3D interactivity, terminal-inspired aesthetics, and seamless user experience, Omnideck serves as the ultimate digital database for every transformation in the series.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Key Features
+3D Interactive Interface: Experience a highly responsive 3D parallax engine that brings alien transformations to life with real-time mouse-tracking physics.
 
-Currently, two official plugins are available:
+Immersive Hero Section: A "Hero Time" landing experience featuring dynamic background elements and a polished, glass-morphism terminal interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Alien Index: A streamlined, background-free cataloging system that utilizes smooth GSAP animations to create a "breathing" and floating effect for each character.
 
-## React Compiler
+Omnitrix Data Hub: A dedicated section to explore the evolution of the Omnitrix, featuring a clean, responsive layout and high-fidelity 3D assets.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Tech-Driven Aesthetic: Built with a "dark mode" design language, neon green accents, and typography optimized for a sci-fi data terminal feel.
 
-## Expanding the ESLint configuration
+🛠 Tech Stack
+Frontend: React.js
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Animation: GSAP (GreenSock Animation Platform) for physics-based movement and infinite floating loops.
+
+Styling: Tailwind CSS for responsive grid layouts and glass-morphism effects.
+
+3D Visuals: Custom ThreeMeshVisualizer component for rendering and controlling 3D assets.
+
+📂 Project Structure
+src/components/: Contains modular UI components including Aliens.jsx, Omnitrix.jsx, and ThreeMeshVisualizer.jsx.
+
+src/data/: Centralized data management for alien species and device generations.
+
+assets/: Repository for high-resolution character renders and device imagery.
+
+⚙️ Development Notes
+State Management: Optimized with React Hooks to ensure zero-lag interactions when switching between alien profiles.
+
+Animation Physics: Each 3D card utilizes perspective-based transforms (perspective(1000px)) to provide authentic depth when users interact with the interface.
+
+This project is an ongoing exploration of bringing 3D web experiences to life. Feel free to explore the code, report issues, or suggest new features for the Omnitrix database!
