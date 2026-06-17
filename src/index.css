@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-omni-glow: #10b981;
+  --color-omni-dark: #064e3b;
+  --color-omni-bright: #34d399;
+}
+
+body {
+  margin: 0;
+  background-color: #000000;
+  overflow-x: hidden;
+}
+
+/* Custom alien green scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #10b981;
+  border-radius: 3px;
+}
